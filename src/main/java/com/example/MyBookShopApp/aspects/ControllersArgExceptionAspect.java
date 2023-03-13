@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 
 @Aspect
 @Component
-public class BooksRestApiControllerArgExceptionAspect {
+public class ControllersArgExceptionAspect {
 
     private Logger logger = Logger.getLogger(this.getClass().getName());
 
