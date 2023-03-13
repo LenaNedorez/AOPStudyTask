@@ -1,4 +1,4 @@
 package com.example.MyBookShopApp.annotations;
 
-public @interface ArgsCatchable {
+public @interface ArgExceptionCatchable {
 }

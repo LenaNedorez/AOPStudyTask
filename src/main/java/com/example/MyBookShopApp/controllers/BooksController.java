@@ -1,5 +1,6 @@
 package com.example.MyBookShopApp.controllers;
 
+import com.example.MyBookShopApp.annotations.ArgExceptionCatchable;
 import com.example.MyBookShopApp.data.Book;
 import com.example.MyBookShopApp.data.BookRepository;
 import com.example.MyBookShopApp.data.ResourceStorage;
@@ -49,6 +50,7 @@ public class BooksController {
     }
 
     @GetMapping("/download/{hash}")
+    @ArgExceptionCatchable
     public ResponseEntity<ByteArrayResource> bookFile(@PathVariable("hash") String hash) throws IOException {
 
         Path path = storage.getBookFilePath(hash);

@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 @Aspect
 @Component
-public class BooksRestApiControllerArgCatcherAspect {
+public class BooksRestApiControllerResponseCatcherAspect {
 
     private Logger logger = Logger.getLogger(this.getClass().getName());
 

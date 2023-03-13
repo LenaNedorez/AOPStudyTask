@@ -1,5 +1,6 @@
 package com.example.MyBookShopApp.controllers;
 
+import com.example.MyBookShopApp.annotations.ArgExceptionCatchable;
 import com.example.MyBookShopApp.data.ApiResponse;
 import com.example.MyBookShopApp.data.Book;
 import com.example.MyBookShopApp.data.BookService;
@@ -40,6 +41,7 @@ public class BooksRestApiController {
             @io.swagger.annotations.ApiResponse(code = 200, message = "Successful request"),
 
     })
+    @ArgExceptionCatchable
     public ResponseEntity<ApiResponse<Book>> booksByTitle(@RequestParam("title") String title) throws BookstoreApiWrongParameterException {
         ApiResponse<Book> response = new ApiResponse<>();
         List<Book> data = bookService.getBooksByTitle(title);
